@@ -5,8 +5,9 @@ import random
 def generate_input_file(filename, num_timesteps=1000, num_events=500):
     with open(filename, 'w') as f:
         # Write the total number of timesteps at the top of the file
-        f.write(f"{num_timesteps}\n")
-        
+        f.write("{0}".format(num_timesteps))
+        f.write("\n")
+	        
         for _ in range(num_events):
             # Randomly choose the event type: 'source' or 'force'
             event_type = random.choice(['source', 'force'])
@@ -30,9 +31,9 @@ def generate_input_file(filename, num_timesteps=1000, num_events=500):
             
             # Write the event to the file
             if event_type == 'source':
-                f.write(f"{event_type} {density} {timestep}\n")
+                f.write("{0} {1} {2}\n".format(event_type, density, timestep))
             elif event_type == 'force':
-                f.write(f"{event_type} {x} {y} {z} {timestep}\n")
+                f.write("{0} {1} {2} {3} {4}\n".format(event_type, x, y, z, timestep))
 
 # Generate the input file with 1000 timesteps and 500 events
 generate_input_file("events.txt", num_timesteps=100, num_events=20)

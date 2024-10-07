@@ -270,3 +270,5 @@ __pycache__/
 
 .[Cc]langd*
 compile_commands.json
+
+fluid_sim
