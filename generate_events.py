@@ -36,4 +36,4 @@ def generate_input_file(filename, num_timesteps=1000, num_events=500):
                 f.write("{0} {1} {2} {3} {4}\n".format(event_type, x, y, z, timestep))
 
 # Generate the input file with 1000 timesteps and 500 events
-generate_input_file("events.txt", num_timesteps=100, num_events=20)
+generate_input_file("events.txt", num_timesteps=1000, num_events=50)
