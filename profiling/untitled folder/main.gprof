@@ -3,18 +3,17 @@ Flat profile:
 Each sample counts as 0.01 seconds.
   %   cumulative   self              self     total           
  time   seconds   seconds    calls  ms/call  ms/call  name    
- 77.85      5.99     5.99      600     9.99    10.23  lin_solve(int, int, int, int, float*, float*, float, float)
- 14.04      7.07     1.08      400     2.70     2.70  advect(int, int, int, int, float*, float*, float*, float*, float*, float)
-  4.94      7.46     0.38      200     1.90    12.18  project(int, int, int, float*, float*, float*, float*, float*)
-  2.08      7.62     0.16    13400     0.01     0.01  set_bnd(int, int, int, int, float*)
-  1.04      7.70     0.08      100     0.80    13.74  dens_step(int, int, int, float*, float*, float*, float*, float*, float, float)
-  0.13      7.71     0.01      121     0.08    42.25  vel_step(int, int, int, float*, float*, float*, float*, float*, float*, float, float)
-  0.00      7.71     0.00      100     0.00     0.00  apply_events(std::vector<Event, std::allocator<Event> > const&)
-  0.00      7.71     0.00      100     0.00     0.00  EventManager::get_events_at_timestamp(int) const
-  0.00      7.71     0.00       20     0.00     0.00  void std::vector<Event, std::allocator<Event> >::_M_realloc_insert<Event const&>(__gnu_cxx::__normal_iterator<Event*, std::vector<Event, std::allocator<Event> > >, Event const&)
-  0.00      7.71     0.00        1     0.00     0.00  _GLOBAL__sub_I__Z10add_sourceiiiPfS_f
-  0.00      7.71     0.00        1     0.00     0.00  _GLOBAL__sub_I__Z13allocate_datav
-  0.00      7.71     0.00        1     0.00     0.00  _GLOBAL__sub_I__ZN12EventManager11read_eventsERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE
+ 85.19      9.74     9.74      600    16.23    16.59  lin_solve(int, int, int, int, float*, float*, float, float)
+  9.72     10.85     1.11      400     2.78     2.78  advect(int, int, int, int, float*, float*, float*, float*, float*, float)
+  2.36     11.12     0.27      200     1.35    18.01  project(int, int, int, float*, float*, float*, float*, float*)
+  2.10     11.36     0.24    13400     0.02     0.02  set_bnd(int, int, int, int, float*)
+  0.48     11.41     0.06      100     0.55    19.93  dens_step(int, int, int, float*, float*, float*, float*, float*, float, float)
+  0.18     11.43     0.02      121     0.17    63.12  vel_step(int, int, int, float*, float*, float*, float*, float*, float*, float, float)
+  0.00     11.43     0.00      100     0.00     0.00  apply_events(std::vector<Event, std::allocator<Event> > const&)
+  0.00     11.43     0.00      100     0.00     0.00  EventManager::get_events_at_timestamp(int) const
+  0.00     11.43     0.00       20     0.00     0.00  void std::vector<Event, std::allocator<Event> >::_M_realloc_insert<Event const&>(__gnu_cxx::__normal_iterator<Event*, std::vector<Event, std::allocator<Event> > >, Event const&)
+  0.00     11.43     0.00        1     0.00     0.00  _GLOBAL__sub_I__Z13allocate_datav
+  0.00     11.43     0.00        1     0.00     0.00  _GLOBAL__sub_I__ZN12EventManager11read_eventsERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE
 
  %         the percentage of the total running time of the
 time       program used by this function.
@@ -52,58 +51,58 @@ notice and this notice are preserved.
 		     Call graph (explanation follows)
 
 
-granularity: each sample hit covers 2 byte(s) for 0.13% of 7.71 seconds
+granularity: each sample hit covers 2 byte(s) for 0.09% of 11.43 seconds
 
 index % time    self  children    called     name
                                                  <spontaneous>
-[1]     88.5    0.00    6.82                 simulate(EventManager&, int) [1]
-                0.01    4.22     100/121         vel_step(int, int, int, float*, float*, float*, float*, float*, float*, float, float) [3]
-                0.08    1.29     100/100         dens_step(int, int, int, float*, float*, float*, float*, float*, float, float) [5]
-                0.19    1.03     100/200         project(int, int, int, float*, float*, float*, float*, float*) [4]
+[1]     88.4    0.00   10.11                 simulate(EventManager&, int) [1]
+                0.02    6.30     100/121         vel_step(int, int, int, float*, float*, float*, float*, float*, float*, float, float) [3]
+                0.06    1.94     100/100         dens_step(int, int, int, float*, float*, float*, float*, float*, float, float) [5]
+                0.14    1.67     100/200         project(int, int, int, float*, float*, float*, float*, float*) [4]
                 0.00    0.00     100/13400       set_bnd(int, int, int, int, float*) [8]
                 0.00    0.00     100/100         apply_events(std::vector<Event, std::allocator<Event> > const&) [16]
                 0.00    0.00     100/100         EventManager::get_events_at_timestamp(int) const [17]
 -----------------------------------------------
-                1.00    0.02     100/600         dens_step(int, int, int, float*, float*, float*, float*, float*, float, float) [5]
-                2.00    0.05     200/600         project(int, int, int, float*, float*, float*, float*, float*) [4]
-                3.00    0.07     300/600         vel_step(int, int, int, float*, float*, float*, float*, float*, float*, float, float) [3]
-[2]     79.7    5.99    0.14     600         lin_solve(int, int, int, int, float*, float*, float, float) [2]
-                0.14    0.00   12000/13400       set_bnd(int, int, int, int, float*) [8]
+                1.62    0.04     100/600         dens_step(int, int, int, float*, float*, float*, float*, float*, float, float) [5]
+                3.25    0.07     200/600         project(int, int, int, float*, float*, float*, float*, float*) [4]
+                4.87    0.11     300/600         vel_step(int, int, int, float*, float*, float*, float*, float*, float*, float, float) [3]
+[2]     87.0    9.74    0.22     600         lin_solve(int, int, int, int, float*, float*, float, float) [2]
+                0.22    0.00   12000/13400       set_bnd(int, int, int, int, float*) [8]
 -----------------------------------------------
-                0.00    0.89      21/121         EventManager::read_events(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) [7]
-                0.01    4.22     100/121         simulate(EventManager&, int) [1]
-[3]     66.3    0.01    5.10     121         vel_step(int, int, int, float*, float*, float*, float*, float*, float*, float, float) [3]
-                3.00    0.07     300/600         lin_solve(int, int, int, int, float*, float*, float, float) [2]
-                0.19    1.03     100/200         project(int, int, int, float*, float*, float*, float*, float*) [4]
-                0.81    0.00     300/400         advect(int, int, int, int, float*, float*, float*, float*, float*, float) [6]
-                0.00    0.00     400/13400       set_bnd(int, int, int, int, float*) [8]
+                0.00    1.32      21/121         EventManager::read_events(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) [6]
+                0.02    6.30     100/121         simulate(EventManager&, int) [1]
+[3]     66.8    0.02    7.62     121         vel_step(int, int, int, float*, float*, float*, float*, float*, float*, float, float) [3]
+                4.87    0.11     300/600         lin_solve(int, int, int, int, float*, float*, float, float) [2]
+                0.14    1.67     100/200         project(int, int, int, float*, float*, float*, float*, float*) [4]
+                0.83    0.00     300/400         advect(int, int, int, int, float*, float*, float*, float*, float*, float) [7]
+                0.01    0.00     400/13400       set_bnd(int, int, int, int, float*) [8]
 -----------------------------------------------
-                0.19    1.03     100/200         simulate(EventManager&, int) [1]
-                0.19    1.03     100/200         vel_step(int, int, int, float*, float*, float*, float*, float*, float*, float, float) [3]
-[4]     31.6    0.38    2.06     200         project(int, int, int, float*, float*, float*, float*, float*) [4]
-                2.00    0.05     200/600         lin_solve(int, int, int, int, float*, float*, float, float) [2]
+                0.14    1.67     100/200         simulate(EventManager&, int) [1]
+                0.14    1.67     100/200         vel_step(int, int, int, float*, float*, float*, float*, float*, float*, float, float) [3]
+[4]     31.5    0.27    3.33     200         project(int, int, int, float*, float*, float*, float*, float*) [4]
+                3.25    0.07     200/600         lin_solve(int, int, int, int, float*, float*, float, float) [2]
                 0.01    0.00     800/13400       set_bnd(int, int, int, int, float*) [8]
 -----------------------------------------------
-                0.08    1.29     100/100         simulate(EventManager&, int) [1]
-[5]     17.8    0.08    1.29     100         dens_step(int, int, int, float*, float*, float*, float*, float*, float, float) [5]
-                1.00    0.02     100/600         lin_solve(int, int, int, int, float*, float*, float, float) [2]
-                0.27    0.00     100/400         advect(int, int, int, int, float*, float*, float*, float*, float*, float) [6]
+                0.06    1.94     100/100         simulate(EventManager&, int) [1]
+[5]     17.4    0.06    1.94     100         dens_step(int, int, int, float*, float*, float*, float*, float*, float, float) [5]
+                1.62    0.04     100/600         lin_solve(int, int, int, int, float*, float*, float, float) [2]
+                0.28    0.00     100/400         advect(int, int, int, int, float*, float*, float*, float*, float*, float) [7]
                 0.00    0.00     100/13400       set_bnd(int, int, int, int, float*) [8]
 -----------------------------------------------
-                0.27    0.00     100/400         dens_step(int, int, int, float*, float*, float*, float*, float*, float, float) [5]
-                0.81    0.00     300/400         vel_step(int, int, int, float*, float*, float*, float*, float*, float*, float, float) [3]
-[6]     14.0    1.08    0.00     400         advect(int, int, int, int, float*, float*, float*, float*, float*, float) [6]
------------------------------------------------
                                                  <spontaneous>
-[7]     11.5    0.00    0.89                 EventManager::read_events(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) [7]
-                0.00    0.89      21/121         vel_step(int, int, int, float*, float*, float*, float*, float*, float*, float, float) [3]
+[6]     11.6    0.00    1.33                 EventManager::read_events(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) [6]
+                0.00    1.32      21/121         vel_step(int, int, int, float*, float*, float*, float*, float*, float*, float, float) [3]
+-----------------------------------------------
+                0.28    0.00     100/400         dens_step(int, int, int, float*, float*, float*, float*, float*, float, float) [5]
+                0.83    0.00     300/400         vel_step(int, int, int, float*, float*, float*, float*, float*, float*, float, float) [3]
+[7]      9.7    1.11    0.00     400         advect(int, int, int, int, float*, float*, float*, float*, float*, float) [7]
 -----------------------------------------------
                 0.00    0.00     100/13400       simulate(EventManager&, int) [1]
                 0.00    0.00     100/13400       dens_step(int, int, int, float*, float*, float*, float*, float*, float, float) [5]
-                0.00    0.00     400/13400       vel_step(int, int, int, float*, float*, float*, float*, float*, float*, float, float) [3]
+                0.01    0.00     400/13400       vel_step(int, int, int, float*, float*, float*, float*, float*, float*, float, float) [3]
                 0.01    0.00     800/13400       project(int, int, int, float*, float*, float*, float*, float*) [4]
-                0.14    0.00   12000/13400       lin_solve(int, int, int, int, float*, float*, float, float) [2]
-[8]      2.1    0.16    0.00   13400         set_bnd(int, int, int, int, float*) [8]
+                0.22    0.00   12000/13400       lin_solve(int, int, int, int, float*, float*, float, float) [2]
+[8]      2.1    0.24    0.00   13400         set_bnd(int, int, int, int, float*) [8]
 -----------------------------------------------
                 0.00    0.00     100/100         simulate(EventManager&, int) [1]
 [16]     0.0    0.00    0.00     100         apply_events(std::vector<Event, std::allocator<Event> > const&) [16]
@@ -115,14 +114,11 @@ index % time    self  children    called     name
                 0.00    0.00      20/20          EventManager::get_events_at_timestamp(int) const [17]
 [18]     0.0    0.00    0.00      20         void std::vector<Event, std::allocator<Event> >::_M_realloc_insert<Event const&>(__gnu_cxx::__normal_iterator<Event*, std::vector<Event, std::allocator<Event> > >, Event const&) [18]
 -----------------------------------------------
-                0.00    0.00       1/1           __libc_csu_init [37]
-[19]     0.0    0.00    0.00       1         _GLOBAL__sub_I__Z10add_sourceiiiPfS_f [19]
+                0.00    0.00       1/1           __libc_csu_init [36]
+[19]     0.0    0.00    0.00       1         _GLOBAL__sub_I__Z13allocate_datav [19]
 -----------------------------------------------
-                0.00    0.00       1/1           __libc_csu_init [37]
-[20]     0.0    0.00    0.00       1         _GLOBAL__sub_I__Z13allocate_datav [20]
------------------------------------------------
-                0.00    0.00       1/1           __libc_csu_init [37]
-[21]     0.0    0.00    0.00       1         _GLOBAL__sub_I__ZN12EventManager11read_eventsERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE [21]
+                0.00    0.00       1/1           __libc_csu_init [36]
+[20]     0.0    0.00    0.00       1         _GLOBAL__sub_I__ZN12EventManager11read_eventsERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE [20]
 -----------------------------------------------
 
  This table describes the call tree of the program, and was sorted by
@@ -215,7 +211,7 @@ notice and this notice are preserved.
 
 Index by function name
 
-  [19] _GLOBAL__sub_I__Z10add_sourceiiiPfS_f [6] advect(int, int, int, int, float*, float*, float*, float*, float*, float) [5] dens_step(int, int, int, float*, float*, float*, float*, float*, float, float)
-  [20] _GLOBAL__sub_I__Z13allocate_datav [4] project(int, int, int, float*, float*, float*, float*, float*) [2] lin_solve(int, int, int, int, float*, float*, float, float)
-  [21] _GLOBAL__sub_I__ZN12EventManager11read_eventsERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE [8] set_bnd(int, int, int, int, float*) [17] EventManager::get_events_at_timestamp(int) const
+  [19] _GLOBAL__sub_I__Z13allocate_datav [4] project(int, int, int, float*, float*, float*, float*, float*) [2] lin_solve(int, int, int, int, float*, float*, float, float)
+  [20] _GLOBAL__sub_I__ZN12EventManager11read_eventsERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE [8] set_bnd(int, int, int, int, float*) [17] EventManager::get_events_at_timestamp(int) const
   [16] apply_events(std::vector<Event, std::allocator<Event> > const&) [3] vel_step(int, int, int, float*, float*, float*, float*, float*, float*, float, float) [18] void std::vector<Event, std::allocator<Event> >::_M_realloc_insert<Event const&>(__gnu_cxx::__normal_iterator<Event*, std::vector<Event, std::allocator<Event> > >, Event const&)
+   [7] advect(int, int, int, int, float*, float*, float*, float*, float*, float) [5] dens_step(int, int, int, float*, float*, float*, float*, float*, float, float)
