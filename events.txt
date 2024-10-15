@@ -1,21 +1,51 @@
-100
-force 0 1 0 83
-source 3 68
-force 0 1 0 25
-source 4 92
-force 1 0 0 5
-source 2 63
-force 0 1 0 81
-force 0 0 1 68
-source 3 47
-force 0 0 1 62
-force 1 0 0 10
-force 1 0 0 93
-force 1 0 0 93
-force 1 0 0 39
-source 1 32
-force 0 1 0 3
-force 1 0 0 58
-source 5 93
-source 7 43
-source 6 1
+1000
+source 4 879
+force 0 0 1 821
+source 4 131
+source 10 809
+source 1 95
+force 1 0 0 418
+source 5 379
+source 5 984
+force 1 0 0 220
+source 10 323
+force 0 0 1 894
+force 1 0 0 524
+source 8 815
+source 5 548
+source 2 298
+source 9 311
+force 1 0 0 753
+force 1 0 0 120
+force 1 0 0 91
+source 6 161
+source 4 131
+source 9 721
+source 2 308
+source 1 549
+source 9 587
+force 0 1 0 401
+force 0 0 1 48
+source 5 663
+force 1 0 0 215
+force 1 0 0 736
+force 0 0 1 288
+force 1 0 0 329
+source 6 343
+source 9 681
+source 4 75
+source 3 530
+force 0 0 1 479
+force 0 0 1 437
+source 1 369
+source 5 786
+force 1 0 0 499
+force 0 0 1 209
+force 1 0 0 125
+force 0 0 1 177
+source 7 172
+force 0 0 1 160
+force 1 0 0 224
+force 0 0 1 837
+source 4 280
+force 0 1 0 650
